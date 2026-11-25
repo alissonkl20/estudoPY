@@ -20,7 +20,7 @@ from re import match
 import sys
 from dataclasses import dataclass
 from typing import Any, Callable, Iterable
-from unittest import case
+from unittest import case, result
 
 # =============================================================================
 # NÍVEL BÁSICO — LÓGICA
@@ -287,14 +287,30 @@ def a003_anagrama(a: str, b: str) -> bool:
 
 
 def a004_maior_substring_sem_repetir(s: str) -> int:
-    i
+    result = 0
+    for i in range(len(s)):
+        substring = ""
+        for h in range(i, len(s)):
+            if s[h] in substring:
+                break
+            substring += s[h]
+            result = max(result, len(substring))
 
-
+    return result
 
 
 def a005_ordenar_contagem(xs: list[int]) -> list[int]:
     """Ordena inteiros não negativos com contagem (O(n+k)), sem .sort()."""
-    raise NotImplementedError
+    result = []
+    maior = max(xs)
+    contagem = [0] * (maior + 1)
+
+    for i in range(len(xs)):
+        contagem[xs[i]] += 1
+    
+    
+
+    
 
 
 def a006_flatten(xs: list) -> list:

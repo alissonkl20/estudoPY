@@ -47,7 +47,7 @@ Este arquivo é o **índice mestre** do repositório. Use-o para saber *o que es
 
 ---
 
-## Checklist — Intermediário
+## Checklist — Intermediário             
 
 - [ ] Pilares: objetos, EAFP, duck typing — [README.md#1-pilares-do-python](README.md)
 - [ ] Paradigmas (procedural, OOP, funcional) — [README.md#2-paradigmas](README.md)
